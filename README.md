@@ -447,10 +447,9 @@ dsh plugin add ./dsh-subscription-balance-1.6.0.tgz
 
 ## Verification
 
-```text
-node --check index.js
-node --check client.js
-node --test --test-isolation=none test/core.test.mjs test/client-smoke.test.mjs test/host-integration.test.mjs test/config-affordance.test.mjs
+```sh
+npm test          # node --check plus the four test files
+npm pack --dry-run
 ```
 
 The tests cover Kimi window completeness, legacy/current conflict detection,
@@ -459,10 +458,32 @@ aggregation, per-model usage, structural provider classification, hand-added
 provider sources, price-document validation and precedence, the profile
 config-editor write path, credential-target coverage and write validation, the
 credential-store write route, provider-neutral pricing/estimates, OpenAI
-short/long-context tiers, price/peak math, active source selection, and client
-rendering of the chip, panel, Settings page, credential entries, OpenAI card,
-generic usage card, price-table card (including the in-place editor), catalog,
-estimate card, and current-conversation resolution.
+short/long-context tiers, price/peak math, active source selection, HTTP route
+admission (Connection policy and the same-origin fallback), and client rendering
+of the chip, panel, Settings page, credential entries, OpenAI card, generic usage
+card, price-table card (including the in-place editor), catalog, estimate card,
+and current-conversation resolution.
+
+## Release
+
+```sh
+npm login            # once per machine; the account needs 2FA
+npm test
+npm pack --dry-run   # inspect the published file list
+npm publish --access public
+```
+
+Then tag and push the repository:
+
+```sh
+git tag v1.6.0
+git push origin main --tags
+```
+
+To list the release in a plugin market, add `dsh-subscription-balance` to the
+index generator's input, publish the generated `index.json` with its `icons/`
+directory, and point **Plugins → Discover → Add index** at it. The market
+installs `dsh-subscription-balance@1.6.0` after checking `engines.dsh`.
 
 ## License
 
