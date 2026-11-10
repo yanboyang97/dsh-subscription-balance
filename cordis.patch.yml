@@ -1,0 +1,3 @@
+- insert:
+    - id: subscription-balance
+      name: dsh-subscription-balance
