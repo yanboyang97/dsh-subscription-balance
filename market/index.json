@@ -1,0 +1,42 @@
+{
+  "format": 1,
+  "title": {
+    "en": "yanboyang97 DSH plugins",
+    "zh": "yanboyang97 的 DSH 插件"
+  },
+  "description": {
+    "en": "Community plugins for DeepSeek Harness maintained by yanboyang97.",
+    "zh": "由 yanboyang97 维护的 DeepSeek Harness 社区插件。"
+  },
+  "plugins": [
+    {
+      "name": "dsh-subscription-balance",
+      "title": {
+        "en": "Subscription balance",
+        "zh": "订阅余额"
+      },
+      "description": {
+        "en": "Per-conversation quota and balance for DeepSeek, Kimi Code and OpenAI, plus local usage and priced estimates for every configured provider.",
+        "zh": "按当前会话显示 DeepSeek、Kimi Code 与 OpenAI 的配额/余额，并为每个已配置的模型提供本地用量与价格估算。"
+      },
+      "icon": "icons/dsh-subscription-balance.svg",
+      "author": "yanboyang97",
+      "homepage": "https://github.com/yanboyang97/dsh-subscription-balance#readme",
+      "repository": {
+        "url": "https://github.com/yanboyang97/dsh-subscription-balance"
+      },
+      "versions": [
+        {
+          "version": "1.6.0",
+          "publishTimestamp": 1794289247,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.1 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}

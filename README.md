@@ -361,9 +361,14 @@ open **Settings → Subscription balance**. The section sits directly after
 
 ### From a plugin market
 
-In **Plugins → Discover**, add the index URL that lists this plugin, then install
-it from the card. The market installs `dsh-subscription-balance@<version>` after
-the compatibility check.
+In **Plugins → Discover → Add index source**, add this repository's index:
+
+```text
+https://raw.githubusercontent.com/yanboyang97/dsh-subscription-balance/main/market/index.json
+```
+
+then install it from the card. The market installs
+`dsh-subscription-balance@<version>` after the compatibility check.
 
 ### From a local checkout
 
