@@ -4,6 +4,14 @@
   "description": "Current-conversation quota/balance for known providers, plus local usage and priced estimates for every configured model provider, including hand-added ones, with in-place credential configuration",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanboyang97/dsh-subscription-balance.git"
+  },
+  "homepage": "https://github.com/yanboyang97/dsh-subscription-balance#readme",
+  "bugs": {
+    "url": "https://github.com/yanboyang97/dsh-subscription-balance/issues"
+  },
   "keywords": [
     "dsh",
     "dsh-plugin",
